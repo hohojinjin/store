@@ -13,6 +13,7 @@ public class AgeSimulation02 {
 
         UserRepository userRepository = new UserRepository();
         User user = userRepository.findById(inputId);
+
         AgeCalculator ageCalculator = new AgeCalculator();
 
         UserRepository userRepository3 = new UserRepository();
@@ -77,11 +78,11 @@ public class AgeSimulation02 {
         }
     }
 
-    public static class AgeCalculator {
+    public static class AgeCalculator    {
 
         public boolean isUnderAge(LocalDate birth) {
             int age = getAge(birth);
-            return age < 19;
+            return age < 20;
         }
 
         public int getAge(LocalDate birth) {
