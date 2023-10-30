@@ -8,10 +8,12 @@ public class AgeSimulation01 {
         //콘솔로부터 입력 받기
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("아이디를 입력하세요 : ");
         int inputId = scanner.nextInt();
 
         UserRepository userRepository = new UserRepository();
         User user = userRepository.findById(inputId);
+        System.out.println(user.getName() + "님 안녕하세요.");
 
         AgeCalculator ageCalculator = new AgeCalculator();
 
