@@ -15,6 +15,10 @@ public class AgeSimulation02 {
         User user = userRepository.findById(inputId);
         AgeCalculator ageCalculator = new AgeCalculator();
 
+        UserRepository userRepository2 = new UserRepository();
+        User user2 = userRepository.findById(inputId);
+        AgeCalculator ageCalculator2 = new AgeCalculator();
+
         boolean isBirthDay = AgeCalculator.isBirthDay(user.getBirth());
         int age = ageCalculator.getAge(user.getBirth());
 
