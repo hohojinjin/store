@@ -13,12 +13,13 @@ public class AgeSimulation01 {
 
         UserRepository userRepository = new UserRepository();
         User user = userRepository.findById(inputId);
-        System.out.println(user.getName() + "님 안녕하세요.");
 
         AgeCalculator ageCalculator = new AgeCalculator();
 
         boolean isBirthDay = ageCalculator.isBirthDay(user.getBirth());
         int age = ageCalculator.getAge(user.getBirth());
+
+        System.out.println(user.getName() + "(" + age + ")");
         if (isBirthDay) {
             System.out.printf("%d세의 생일을 축하합니다.\n", age);
         }
