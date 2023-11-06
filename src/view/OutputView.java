@@ -9,7 +9,7 @@ public class OutputView {
 
     public static void printBirthday(int age) {
 
-        System.out.printf("%d번째 생일을 축하합니다 ! \n ", age);
+        System.out.printf("%d번째 생일을 축하합니다 !! \n ", age);
     }
 
     public static void printIsAdult(boolean isUnderAge) {
